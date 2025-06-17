@@ -7,13 +7,16 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner  = new Scanner(System.in);
         String stringToCheck ;
-        do {
+        while (true){
             System.out.println("enter a string to start, :q to quit");
             stringToCheck = scanner.nextLine();
+            if (stringToCheck.equals(":q")){
+                break;
+            }
             String[] result = stringToCheck.split("");
             System.out.println(Arrays.toString(result));
+        }
 
-        }while(!stringToCheck.equals(":q"));
     }
 
 }
